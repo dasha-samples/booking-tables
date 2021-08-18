@@ -1,0 +1,38 @@
+library
+context
+{
+    output status:string?;
+    output serviceStatus:string?;
+    output callBackDetails:string?;
+}
+
+digression i_will_call_back
+{
+    conditions { on #messageHasAnyIntent(digression.i_will_call_back.triggers) priority 1010; }
+    var triggers = ["call_later"];
+    var responses: Phrases[] = ["i_will_call_back"];
+    var serviceStatus = "Done";
+    var status = "CallBack";
+    do
+    {
+        for (var item in digression.i_will_call_back.responses)
+        {
+            #say(item,
+            { 
+                persons_number: $persons_number, 
+                plural: $plural, 
+                booking_time: $booking_time, 
+                user_phone: $user_phone, 
+                user_name: $user_name 
+            });
+        }
+        set $serviceStatus=digression.i_will_call_back.serviceStatus;
+        set $status=digression.i_will_call_back.status;
+        set $callBackDetails = #message.originalText;
+    
+        exit;
+    }
+    transitions
+    {
+    }
+}

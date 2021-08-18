@@ -1,0 +1,606 @@
+{
+  "default": {
+    "voiceInfo": {
+      "lang": "en-US",
+      "speaker": "V2",
+      "speed": 0.3,
+      "variation": 4
+    },
+    "types": {},
+    "macros": {
+      "i_will_call_back": {},
+      "hello": {},
+      "is_table_booked": {},
+      "name_or_number": {},
+      "when_callback": {},
+      "i_said": {},
+      "sorry_wont_call": {},
+      "i_will_wait": {},
+      "i_can_hear_you": {},
+      "dont_understand": {},
+      "dont_understand_hangup": {},
+      "mhm": {},
+      "yes_i_am_a_robot": {},
+      "greeting": {},
+      "greeting_2": {},
+      "time_people": {
+        "persons_number": "dynamic",
+        "plural": "dynamic",
+        "booking_time": "dynamic"
+      },
+      "time_people_2": {
+        "persons_number": "dynamic",
+        "plural": "dynamic",
+        "booking_time": "dynamic"
+      },
+      "people": {
+        "persons_number": "dynamic",
+        "plural": "dynamic",
+        "booking_time": "dynamic"
+      },
+      "time": {
+        "persons_number": "dynamic",
+        "plural": "dynamic",
+        "booking_time": "dynamic"
+      },
+      "another_time": {},
+      "user_name": {
+        "user_name": "dynamic"
+      },
+      "user_phone": {
+        "user_phone": "dynamic"
+      },
+      "everything_cleared": {},
+      "bye": {},
+      "bye_fail": {}
+    },
+    "phrases": {
+      "i_will_call_back": [
+        {
+          "text": "Okay, I'll call you later. Bye!"
+        }
+      ],
+      "hello": {
+        "random": [
+          [
+            {
+              "text": "Hello"
+            }
+          ],
+          [
+            {
+              "text": "Umm, hello?"
+            }
+          ]
+        ]
+      },
+      "when_callback": [
+        {
+          "text": "When can I call you back?"
+        }
+      ],
+      "is_table_booked": [
+        {
+          "text": "so. the table is booked? "
+        }
+      ],
+      "everything_cleared": [
+        {
+          "text": "all values are cleaded"
+        }
+      ],
+      "i_said": [
+        {
+          "text": "i was saying"
+        }
+      ],
+      "sorry_wont_call": [
+        {
+          "text": "Sorry if I bothered you. have a nice day, Bye"
+        }
+      ],
+      "i_will_wait": {
+        "random": [
+          [
+            {
+              "text": "Okay"
+            }
+          ],
+          [
+            {
+              "text": "Sure"
+            }
+          ],
+          [
+            {
+              "text": "Okay, no problem!"
+            }
+          ]
+        ]
+      },
+      "i_can_hear_you": [
+        {
+          "text": "Yes, I hear you"
+        }
+      ],
+      "dont_understand": {
+        "random": [
+          [
+            {
+              "text": "Sorry, the connection drop for a second, could you say it again?"
+            }
+          ],
+          [
+            {
+              "text": "hmm"
+            }
+          ]
+        ]
+      },
+      "dont_understand_hangup": [
+        {
+          "text": "I'm sorry I can barely hear you. I'll try to call you later! Bye!"
+        }
+      ],
+      "mhm": [
+        {
+          "text": "Umm..."
+        }
+      ],
+      "yes_i_am_a_robot": [
+        {
+          "text": "Yes, I am robot! I am "
+        },
+        {
+          "id": "user_name",
+          "type": "dynamic"
+        },
+        {
+          "text": " personal assistant and i have to book a table.. I hope you help me with it? ..Can we continue our conversation?"
+        }
+      ],
+      "greeting": {
+        "first": [
+          {
+            "text": "Hello!. Can i book a table for today?"
+          }
+        ],
+        "repeat": {
+          "random": [
+            [
+              {
+                "text": "Can I..umm...book a table please?"
+              }
+            ],
+            [
+              {
+                "text": "I'd like to book a table for today"
+              }
+            ]
+          ]
+        }
+      },
+      "greeting_2": {
+        "first": [
+          {
+            "text": "Can i book a table for today?"
+          }
+        ],
+        "repeat": {
+          "random": [
+            [
+              {
+                "text": "Can I..umm...book a table please?"
+              }
+            ],
+            [
+              {
+                "text": "I'd like to book a table for today"
+              }
+            ]
+          ]
+        }
+      },
+      "name_or_number": {
+        "first": [
+          {
+            "text": "Umm...may be i should leave the name...and phone number?"
+          }
+        ],
+        "repeat": [
+          {
+            "text": "may be i should leave the name...or phone number?"
+          }
+        ]
+      },
+      "time_people": {
+        "first": [
+          {
+            "text": "For. "
+          },
+          {
+            "id": "persons_number",
+            "type": "dynamic"
+          },
+          {
+            "text": " person"
+          },
+          {
+            "id": "plural",
+            "type": "dynamic"
+          },
+          {
+            "text": " at "
+          },
+          {
+            "id": "booking_time",
+            "type": "dynamic"
+          },
+          {
+            "text": " today"
+          }
+        ],
+        "repeat": {
+          "random": [
+            [
+              {
+                "text": "Today at "
+              },
+              {
+                "id": "booking_time",
+                "type": "dynamic"
+              },
+              {
+                "text": " for "
+              },
+              {
+                "id": "persons_number",
+                "type": "dynamic"
+              },
+              {
+                "text": " person"
+              },
+              {
+                "id": "plural",
+                "type": "dynamic"
+              },
+              {
+                "text": " please"
+              }
+            ],
+            [
+              {
+                "text": "For "
+              },
+              {
+                "id": "persons_number",
+                "type": "dynamic"
+              },
+              {
+                "text": " person"
+              },
+              {
+                "id": "plural",
+                "type": "dynamic"
+              },
+              {
+                "text": " at "
+              },
+              {
+                "id": "booking_time",
+                "type": "dynamic"
+              },
+              {
+                "text": " today"
+              }
+            ]
+          ]
+        }
+      },
+      "time_people_2": {
+        "first": [
+          {
+            "text": "Yes. For. "
+          },
+          {
+            "id": "persons_number",
+            "type": "dynamic"
+          },
+          {
+            "text": " person"
+          },
+          {
+            "id": "plural",
+            "type": "dynamic"
+          },
+          {
+            "text": " at "
+          },
+          {
+            "id": "booking_time",
+            "type": "dynamic"
+          },
+          {
+            "text": " today"
+          }
+        ],
+        "repeat": {
+          "random": [
+            [
+              {
+                "text": "Today at "
+              },
+              {
+                "id": "booking_time",
+                "type": "dynamic"
+              },
+              {
+                "text": " for "
+              },
+              {
+                "id": "persons_number",
+                "type": "dynamic"
+              },
+              {
+                "text": " person"
+              },
+              {
+                "id": "plural",
+                "type": "dynamic"
+              },
+              {
+                "text": " please"
+              }
+            ],
+            [
+              {
+                "text": "For "
+              },
+              {
+                "id": "persons_number",
+                "type": "dynamic"
+              },
+              {
+                "text": " person"
+              },
+              {
+                "id": "plural",
+                "type": "dynamic"
+              },
+              {
+                "text": " at "
+              },
+              {
+                "id": "booking_time",
+                "type": "dynamic"
+              },
+              {
+                "text": " today"
+              }
+            ]
+          ]
+        }
+      },
+      "people": {
+        "first": [
+          {
+            "text": "For "
+          },
+          {
+            "id": "persons_number",
+            "type": "dynamic"
+          },
+          {
+            "text": " person"
+          },
+          {
+            "id": "plural",
+            "type": "dynamic"
+          }
+        ],
+        "repeat": {
+          "random": [
+            [
+              {
+                "text": "Today at "
+              },
+              {
+                "id": "booking_time",
+                "type": "dynamic"
+              },
+              {
+                "text": " for "
+              },
+              {
+                "id": "persons_number",
+                "type": "dynamic"
+              },
+              {
+                "text": " person"
+              },
+              {
+                "id": "plural",
+                "type": "dynamic"
+              },
+              {
+                "text": " please"
+              }
+            ],
+            [
+              {
+                "text": "For "
+              },
+              {
+                "id": "persons_number",
+                "type": "dynamic"
+              },
+              {
+                "text": " person"
+              },
+              {
+                "id": "plural",
+                "type": "dynamic"
+              },
+              {
+                "text": " at "
+              },
+              {
+                "id": "booking_time",
+                "type": "dynamic"
+              },
+              {
+                "text": " today"
+              }
+            ]
+          ]
+        }
+      },
+      "time": {
+        "first": [
+          {
+            "text": "At. "
+          },
+          {
+            "id": "booking_time",
+            "type": "dynamic"
+          },
+          {
+            "text": " today"
+          }
+        ],
+        "repeat": {
+          "random": [
+            [
+              {
+                "text": "Today at "
+              },
+              {
+                "id": "booking_time",
+                "type": "dynamic"
+              },
+              {
+                "text": " for "
+              },
+              {
+                "id": "persons_number",
+                "type": "dynamic"
+              },
+              {
+                "text": " person"
+              },
+              {
+                "id": "plural",
+                "type": "dynamic"
+              },
+              {
+                "text": " please"
+              }
+            ],
+            [
+              {
+                "text": "For "
+              },
+              {
+                "id": "persons_number",
+                "type": "dynamic"
+              },
+              {
+                "text": " person"
+              },
+              {
+                "id": "plural",
+                "type": "dynamic"
+              },
+              {
+                "text": " at "
+              },
+              {
+                "id": "booking_time",
+                "type": "dynamic"
+              },
+              {
+                "text": " today"
+              }
+            ]
+          ]
+        }
+      },
+      "another_time": [
+        {
+          "text": "Fine, "
+        },
+        {
+          "id": "amount",
+          "type": "dynamic"
+        },
+        {
+          "text": " p.m. works"
+        }
+      ],
+      "user_name": {
+        "first": [
+          {
+            "text": "The first name is "
+          },
+          {
+            "id": "user_name",
+            "type": "dynamic"
+          }
+        ],
+        "repeat": [
+          {
+            "text": "The name is "
+          },
+          {
+            "id": "user_name",
+            "type": "dynamic",
+            "voiceInfo": { "speed": 0.1}
+          }
+        ]
+      },
+      "user_phone": {
+        "first": [
+          {
+            "text": "the phone number is "
+          },
+          {
+            "id": "user_phone",
+            "type": "dynamic"
+          }
+        ],
+        "repeat": {
+          "random": [
+            [
+              {
+                "id": "user_phone",
+                "type": "dynamic",
+                "voiceInfo": { "speed": 0.1}
+              }
+            ],
+            [
+              {
+                "text": "the number is ",
+                "voiceInfo": { "speed": 0.2}
+              },
+              {
+                "id": "user_phone",
+                "type": "dynamic",
+                "voiceInfo": { "speed": 0.1}
+              }
+            ]
+          ]
+        }
+      },
+      "bye": [
+        {
+          "text": "okay, thank you. bye!"
+        }
+      ],
+      "bye_fail": [
+        {
+          "text": "Got it, will do. Thanks"
+        }
+      ]
+    }
+  }
+}

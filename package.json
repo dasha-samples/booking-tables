@@ -1,0 +1,17 @@
+{
+  "name": "money-transfer-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.0"
+  },
+  "dependencies": {
+    "@dasha.ai/sdk": "^0.3.0",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "moment": "^2.29.1",
+    "node-uuid": "^1.4.8"
+  }
+}
