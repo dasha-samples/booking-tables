@@ -6,8 +6,8 @@ This application is for reserving tables in restaurants. In this model implement
 
 1. Clone the repo and install the dependencies:
 ```sh
-git clone https://github.com/dasha-samples/dasha-money-transfer-demo
-cd dasha-money-transfer-demo
+git clone https://github.com/dasha-samples/booking-tables
+cd booking-tables
 npm install
 ```
 
