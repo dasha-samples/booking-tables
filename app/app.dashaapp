@@ -1,0 +1,23 @@
+{
+  "formatVersion": "2",
+  "name": "test-application",
+  "description": "test application",
+  "nlu": {
+    "skills": [
+      "common_phrases",
+      "sentiment"
+    ],
+    "language": "ru-RU",
+    "customIntents": {
+      "file": "intents.json"
+    }
+  },
+  "nlg": {
+    "type": "phrases",
+    "file": "phrasemap.json",
+    "signatureFile": "phrasemap.json"
+  },
+  "dialogue": {
+    "file": "main.dsl"
+  }
+}

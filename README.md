@@ -1,29 +1,23 @@
+This is an example of a Discord bot built using [Discord.js], [Dasha.AI SDK] and its [Discord adapter library].
 
-# How to start the demo app
+[discord.js]: https://npmjs.com/package/discord.js
+[dasha.ai sdk]: https://npmjs.com/package/@dasha.ai/sdk
+[discord adapter library]: https://npmjs.com/package/@dasha.ai/discord
 
-This application is for reserving tables in restaurants. In this model implemented ability to call using a list of numbers  and uploading results into separate file in csv format. Before calling, make sure that the data in the numbers.csv file is correct. If you need any help, please contact our developer community
-[Developer Community](http://community.dasha.ai).
+If on Windows, ensure that you have set up the [development environment].
 
-1. Clone the repo and install the dependencies:
-```sh
-git clone https://github.com/dasha-samples/booking-tables
-cd booking-tables
-npm install
-```
+[development environment]: https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#environment-setup-and-configuration
 
-2. Create or log into your account using the Dasha CLI tool:
+To run this example, you first need to [create a bot] and [add it to a server].
 
-```sh
-npm i -g "@dasha.ai/cli"
-npx dasha account login
-```
+[create a bot]: https://discordjs.guide/preparations/setting-up-a-bot-application.html
+[add it to a server]: https://discordjs.guide/preparations/adding-your-bot-to-servers.html
 
-3. To receive a phone call from Dasha, run:
-    
-    ```sh
-    npm start numbers.csv
-    ```
-     (The phone number should be in the international format without the  `+`, for example `19997775555`. Also before start calling make sure that fields "name,booking_time,user_name,user_phone,persons_number" is correct.).
+Then, obtain your bot's [auth token], and assign it to the `DISCORD_BOT_TOKEN` environment variable. You can also use a [`.env` file].
 
+[auth token]: https://discordjs.guide/preparations/setting-up-a-bot-application.html#your-token
+[`.env` file]: https://www.npmjs.com/package/dotenv#usage
 
+Finally, run `npm start`. The bot should now be displayed as online in Discord.
 
+To launch a conversation in a Discord voice channel, join that channel first, and then send a `/dasha start` command to any text channel on the server.
