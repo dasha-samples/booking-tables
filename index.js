@@ -9,23 +9,18 @@ async function main() {
 
   app.ttsDispatcher = () => "Default";
 
-  app.connectionProvider = async (conv) =>
-    conv.input.phone === "chat"
-      ? dasha.chat.connect(await dasha.chat.createConsoleChat())
-      : dasha.sip.connect(new dasha.sip.Endpoint("default"));
-  await app.start({concurrency:10});
+    console.log(args);
+  });
+
+  await app.start();
   
-  if(process.argv[2] === "chat"){
-    const file = process.argv[3];
-    const data = csv.load(file, null);
-    const conv = app.createConversation({...data[0], phone: "chat"});
+ conv.audio.tts = "dasha";
 
-    const logFile = await fs.promises.open(`./log.txt`, "w");
-    await logFile.appendFile("#".repeat(100) + "\n");
-
-    conv.on("transcription", async (entry) => {
-      await logFile.appendFile(`${entry.speaker}: ${entry.text}\n`);
-    });
+  if (conv.input.phone === "chat") {
+    await dasha.chat.createConsoleChat(conv);
+  } else {
+    conv.on("transcription", console.log);
+  }
 
     conv.on("debugLog", async (event) => {
       if (event?.msg?.msgId === "RecognizedSpeechMessage") {
@@ -36,7 +31,9 @@ async function main() {
       }
     });
 
-    const result = await conv.execute();
+  const result = await conv.execute({
+    channel: conv.input.phone === "chat" ? "text" : "audio",
+  });
     console.log(result.output);
     
     await app.stop();
